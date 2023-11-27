@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TxtActivity">
+
+    <TextView
+        android:id="@+id/user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:padding="8dp"
+        android:text="user2"
+        android:textSize="20dp"
+        android:background="@color/black"
+        android:textColor="@color/white"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0"/>
+
+
+    <EditText
+        android:id="@+id/txtEnter"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="75dp"
+
+        android:background="@drawable/txt_bg"
+        android:hint="Enter Text"
+        android:paddingHorizontal="20dp"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textColorHint="#88EAE2B7"
+        android:textSize="25dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintWidth_percent=".7" />
+
+    <Button
+        android:id="@+id/txtAddBtn"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+
+        android:background="@drawable/btn_bg"
+        android:padding="0dp"
+        android:text="Add Text"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEnter"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintWidth_percent=".55" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="70dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEnter"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintWidth_percent=".85">
+
+        <LinearLayout
+            android:id="@+id/SV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/out_line"
+                android:hint="\n"
+                android:paddingHorizontal="15dp"
+
+                android:paddingTop="15dp"
+                android:textSize="29dp" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="7dp"
+    tools:context=".CalculateActivity">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/COutput"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHeight_percent=".28"
+        app:layout_constraintVertical_bias=".01">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/row1top"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/cal_btn_bg"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHeight_percent=".5"
+            app:layout_constraintVertical_bias="0">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/CNumber2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                android:background="#00000000"
+                android:hint="number 2"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:stateListAnimator="@null"
+                android:textColor="@color/white"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                app:layout_constraintWidth_percent=".45"
+                app:layout_constraintHorizontal_bias="1"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/CMark"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                android:background="#00000000"
+                android:text="*"
+                android:gravity="center"
+                android:textSize="40dp"
+                android:stateListAnimator="@null"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/CNumber2"
+                app:layout_constraintTop_toTopOf="parent"
+
+
+                app:layout_constraintWidth_percent=".1"
+                app:layout_constraintHorizontal_bias="1"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/CNumber1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                android:background="#00000000"
+                android:hint="number 1"
+                android:gravity="center"
+                android:textSize="25dp"
+                android:stateListAnimator="@null"
+                android:textColor="@color/white"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/CMark"
+                app:layout_constraintTop_toTopOf="parent"
+
+                app:layout_constraintWidth_percent=".45"
+                app:layout_constraintHorizontal_bias="1"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/row2top"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/cal_result_bg"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHeight_percent=".5"
+            app:layout_constraintVertical_bias="1">
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/CClear"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                android:background="#00000000"
+                android:text="C"
+                android:textSize="45dp"
+                android:textStyle="bold"
+                android:stateListAnimator="@null"
+                android:textColor="@color/purple_200"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                app:layout_constraintWidth_percent=".25"
+                app:layout_constraintHorizontal_bias="1"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:background="?android:textColorHint"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                app:layout_constraintHeight_percent=".7"
+
+                app:layout_constraintHorizontal_bias=".75"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/CResult"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                android:background="#00000000"
+                android:hint="Result"
+                android:gravity="center"
+                android:textSize="30dp"
+                android:stateListAnimator="@null"
+                android:textColor="@color/white"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/CClear"
+                app:layout_constraintTop_toTopOf="parent"
+
+                app:layout_constraintWidth_percent=".75"
+                app:layout_constraintHorizontal_bias="1"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+
+        android:background="?android:textColor"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".291"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/CButtons"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHeight_percent=".7"
+        app:layout_constraintVertical_bias="1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/row1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHeight_percent=".20"
+            app:layout_constraintVertical_bias="0">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/CPlus"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                android:background="@drawable/cal_btn_bg_orange"
+                android:text="+"
+                android:textSize="35dp"
+                android:stateListAnimator="@null"
+                android:textColor="@color/black"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                app:layout_constraintWidth_percent=".25"
+                app:layout_constraintHorizontal_bias="1"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/CMines"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                android:background="@drawable/cal_btn_bg_orange"
+                android:text="-"
+                android:textSize="35dp"
+                android:stateListAnimator="@null"
+                android:textColor="@color/black"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/CPlus"
+                app:layout_constraintTop_toTopOf="parent"
+
+                app:layout_constraintWidth_percent=".25"
+                app:layout_constraintHorizontal_bias="1"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/CDivide"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                android:background="@drawable/cal_btn_bg_orange"
+                android:text="÷"
+                android:textSize="35dp"
+                android:stateListAnimator="@null"
+                android:textColor="@color/black"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/CMines"
+                app:layout_constraintTop_toTopOf="parent"
+
+                app:layout_constraintWidth_percent=".25"
+                app:layout_constraintHorizontal_bias="1"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/CMultiply"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                android:background="@drawable/cal_btn_bg_orange"
+                android:text="×"
+                android:textSize="35dp"
+                android:stateListAnimator="@null"
+                android:textColor="@color/black"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/CDivide"
+                app:layout_constraintTop_toTopOf="parent"
+
+                app:layout_constraintWidth_percent=".25"
+                app:layout_constraintHorizontal_bias="1"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/row2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/row1"
+            app:layout_constraintHeight_percent=".20"
+            app:layout_constraintVertical_bias="0">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/C9"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                android:background="@drawable/cal_btn_bg"
+                android:text="9"
+                android:textSize="25dp"
+                android:stateListAnimator="@null"
+                android:textColor="@color/white"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                app:layout_constraintWidth_percent=".33"
+                app:layout_constraintHorizontal_bias="1"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/C8"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                android:background="@drawable/cal_btn_bg"
+                android:text="8"
+                android:textSize="25dp"
+                android:stateListAnimator="@null"
+                android:textColor="@color/white"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/C9"
+                app:layout_constraintTop_toTopOf="parent"
+
+                app:layout_constraintWidth_percent=".34"
+                app:layout_constraintHorizontal_bias="1"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/C7"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                android:background="@drawable/cal_btn_bg"
+                android:text="7"
+                android:textSize="25dp"
+                android:stateListAnimator="@null"
+                android:textColor="@color/white"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/C8"
+                app:layout_constraintTop_toTopOf="parent"
+
+                app:layout_constraintWidth_percent=".33"
+                app:layout_constraintHorizontal_bias="1"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/row3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/row2"
+            app:layout_constraintHeight_percent=".20"
+            app:layout_constraintVertical_bias="0">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/C6"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                android:background="@drawable/cal_btn_bg"
+                android:text="6"
+                android:textSize="25dp"
+                android:stateListAnimator="@null"
+                android:textColor="@color/white"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                app:layout_constraintWidth_percent=".33"
+                app:layout_constraintHorizontal_bias="1"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/C5"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                android:background="@drawable/cal_btn_bg"
+                android:text="5"
+                android:textSize="25dp"
+                android:stateListAnimator="@null"
+                android:textColor="@color/white"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/C6"
+                app:layout_constraintTop_toTopOf="parent"
+
+                app:layout_constraintWidth_percent=".34"
+                app:layout_constraintHorizontal_bias="1"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/C4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                android:background="@drawable/cal_btn_bg"
+                android:text="4"
+                android:textSize="25dp"
+                android:stateListAnimator="@null"
+                android:textColor="@color/white"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/C5"
+                app:layout_constraintTop_toTopOf="parent"
+
+                app:layout_constraintWidth_percent=".33"
+                app:layout_constraintHorizontal_bias="1"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/row4"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/row3"
+            app:layout_constraintHeight_percent=".20"
+            app:layout_constraintVertical_bias="0">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/C3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                android:background="@drawable/cal_btn_bg"
+                android:text="3"
+                android:textSize="25dp"
+                android:stateListAnimator="@null"
+                android:textColor="@color/white"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                app:layout_constraintWidth_percent=".33"
+                app:layout_constraintHorizontal_bias="1"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/C2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                android:background="@drawable/cal_btn_bg"
+                android:text="2"
+                android:textSize="25dp"
+                android:stateListAnimator="@null"
+                android:textColor="@color/white"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/C3"
+                app:layout_constraintTop_toTopOf="parent"
+
+                app:layout_constraintWidth_percent=".34"
+                app:layout_constraintHorizontal_bias="1"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/C1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                android:background="@drawable/cal_btn_bg"
+                android:text="1"
+                android:textSize="25dp"
+                android:stateListAnimator="@null"
+                android:textColor="@color/white"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/C2"
+                app:layout_constraintTop_toTopOf="parent"
+
+                app:layout_constraintWidth_percent=".33"
+                app:layout_constraintHorizontal_bias="1"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/row5"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/row4"
+            app:layout_constraintHeight_percent=".20"
+            app:layout_constraintVertical_bias="0">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/CEquals"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                android:background="@drawable/cal_btn_bg_green"
+                android:text="="
+                android:textSize="45dp"
+                android:stateListAnimator="@null"
+                android:textColor="@color/black"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                app:layout_constraintWidth_percent=".33"
+                app:layout_constraintHorizontal_bias="1"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/C0"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                android:background="@drawable/cal_btn_bg"
+                android:text="0"
+                android:textSize="25dp"
+                android:stateListAnimator="@null"
+                android:textColor="@color/white"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/CEquals"
+                app:layout_constraintTop_toTopOf="parent"
+
+                app:layout_constraintWidth_percent=".34"
+                app:layout_constraintHorizontal_bias="1"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/CDeci"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                android:background="@drawable/cal_btn_bg_orange"
+                android:text="."
+                android:textSize="35dp"
+                android:stateListAnimator="@null"
+                android:textColor="@color/black"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/C0"
+                app:layout_constraintTop_toTopOf="parent"
+
+                app:layout_constraintWidth_percent=".33"
+                app:layout_constraintHorizontal_bias="1"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
